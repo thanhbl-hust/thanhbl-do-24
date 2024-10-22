@@ -33,9 +33,12 @@ Contents:
 
 ### 5. Docker 
 
+- [0. Kodekloud Docker Free Lab]()
 - [1. What is Containerization and Container?]()
 
 ### 6. Kubernetes
+
+- [0. Kodekloud Kubernetes Free Lab]()
 
 ### 7. Amazon Web Services
 
@@ -45,6 +48,8 @@ Contents:
 
 ### 9. Terraform
 
-- [1. Kodekloud Terraform Free Lab]()
+- [0. Kodekloud Terraform Free Lab]()
 
-### 10. Artificial Intelligence
+### 10. Grafana and Prometheus
+
+### 11. Artificial Intelligence
