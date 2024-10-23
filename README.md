@@ -16,6 +16,8 @@ Contents:
 - [AWS](#7-amazon-web-services)
 - [Jenkins](#8-jenkins)
 - [Terraform](#9-terraform)
+- [Grafana and Prometheus](#10-grafana-and-prometheus)
+- [Artificial Intelligent](#11-artificial-intelligence)
 
 ### 0. Data structures and Algorithms
 
