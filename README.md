@@ -37,9 +37,11 @@ Contents:
 
 - [1. What is Containerization and Container?]()
 
-### 6. Kubernetes
+- [2. Docker Registry and Docker Volume]()
 
-- [1. Kodekloud Kubernetes Free Lab]()
+- [3. Docker Network]()
+
+### 6. Kubernetes
 
 ### 7. Amazon Web Services
 
