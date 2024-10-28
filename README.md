@@ -29,6 +29,8 @@ Contents:
 
 ### 2. Linux
 
+- [1. Linux basic task]()
+
 ### 3. Git
 
 ### 4. MySQL
@@ -42,6 +44,8 @@ Contents:
 - [3. Docker Network]()
 
 ### 6. Kubernetes
+
+- [1. Container orchestration and Kubernetes Overview]()
 
 ### 7. Amazon Web Services
 
