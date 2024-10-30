@@ -40,6 +40,10 @@
 
 - An index is a database structure that you can use to improve the performance of database activity. Each index will contain sorted value of indexed column and pointer to its row. (**B-Tree Indexing**)
 
+<div style="text-align: center;">
+  <img src="pic/index-table.png" alt="Example for database types" style="max-width: 450px; width: 100%; height: auto;">
+</div>
+
 **What is key in database?**
 
 - A key is an attribute or set of attributes that identifies records in a table. 
@@ -47,6 +51,10 @@
   - Primary
   - Foreign
   - Unique
+
+<div style="text-align: center;">
+  <img src="pic/db-keys.png" alt="Example for database types" style="max-width: 500px; width: 100%; height: auto;">
+</div>
 
 **Constraints**
 
@@ -58,6 +66,10 @@ Common constraints:
 - UNIQUE
 - PRIMARY KEY (NOT NULL + UNIQUE)
 - FOREIGN KEY
+
+**What is database schema?**
+
+- A database schema refers to the logical and visual configuration of the entire relational database. 
 
 ### Database types
 
