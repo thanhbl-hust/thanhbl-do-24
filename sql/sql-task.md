@@ -60,12 +60,12 @@
 
 - SQL constraints are used to specify rules for the data in a table. They are used to limit the type of data that can go into a table. 
 
-Common constraints:
+- Common constraints:
 
-- NOT NULL
-- UNIQUE
-- PRIMARY KEY (NOT NULL + UNIQUE)
-- FOREIGN KEY
+  - NOT NULL
+  - UNIQUE
+  - PRIMARY KEY (NOT NULL + UNIQUE)
+  - FOREIGN KEY
 
 **What is database schema?**
 
