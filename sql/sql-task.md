@@ -28,9 +28,13 @@
 
 -  The most efficent way to store data is with the help of a database. A database is an organized collection of structured information, or data, typically stored electronically in a computer system.
 
-**What is tables in MySQL Server?**
+**What is tables in Relational Database?**
 
 - Tables are database objects that contain all the data in a database. In tables, data is logically organized in a row-and-column format similar to a spreadsheet. Each row represents a record, and each column represents a field in the record.
+
+<div style="text-align: center;">
+  <img src="pic/component-of-a-database-table.png" alt="Example for database types" style="max-width: 600px; width: 100%; height: auto;">
+</div>
 
 **What is index in database?**
 
@@ -268,3 +272,4 @@ Your MySQL connection id is 3
 - [learn.microfost.com - Tables](https://learn.microsoft.com/en-us/sql/relational-databases/tables/tables?view=sql-server-ver16)
 - [progress.com - How to implement and use database indexes](https://www.progress.com/tutorials/odbc/using-indexes)
 - [Oracle.com - What is database](https://www.oracle.com/vn/database/what-is-database/)
+- [w3schools.com - MySQL Constraints](https://www.w3schools.com/mysql/mysql_constraints.asp)
