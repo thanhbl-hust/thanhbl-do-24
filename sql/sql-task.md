@@ -1,173 +1,48 @@
-# Contents
+# [Database Overview - Final Version]()
 
-- [Data Overview](#data-overview)
+## [**Contents**](#contents)
 
-  - [Database concepts: database, table, column/field, row/record,. schema, index, keys, constrains, query..](#database-concepts)
+- [**Database Overview**](#database-overview)
+  - [History of database](#history-of-databse)
+  - [What is database?](#what-is-database)
+  - [Database types: Relational and Non-relational database](#database-types-relational-and-non-relational-database)
+  - [(Relational) Database concepts: table, column, row, schema, index, keys, constraints, query..](#relational-database-concepts-table-column-row-schema-index-keys-constraints-query)
+  - [Database management concepts: update, backup, restore](#database-management-concepts-update-backup-restore)
 
-  - [Database types: relational database, non-relational database..](#database-types)
-
-  - [Database management: update, backup, store](#database-management)
-
-- [Target and plan](#target-and-plan)
-
+- [**Target and plan (MySQL)**](#target-and-plan)
   - [Install and configure MySQL server](#install-and-configure-mysql-server)
-
-  - [Management user, permissions](#management-user-permissions)
-
+  - [Manage user, permissions](#manage-user-permissions)
   - [Basic Query](#basic-query)
+  - [Data type, variable](#data-type-variable)
+  - [Important Parameters](#important-parameters)
 
-  - [Datatype, Variables](#datatype-variables)
+- [**References**](#references)
 
-  - [List important parameter](#list-important-parameter)
+## [**Database Overview**]()
 
-## Data overview
+### [History of databse]()
 
-### Database concepts
+### [What is database?]()
 
-**What is database?**
+**So, what is a database?** 
+- A database is a collection of data that represents some aspect of the real world, having a unified logical relationship, designed and containing data that serves some purposes.
 
--  The most efficent way to store data is with the help of a database. A database is an organized collection of structured information, or data, typically stored electronically in a computer system.
+- For example, a university will have a database to store information about students, teachers, courses, score... . A bank will have a database to store information about customers, accounts, transactions...
 
-**What is tables in Relational Database?**
+### [Database types: Relational and Non-relational database]()
 
-- Tables are database objects that contain all the data in a database. In tables, data is logically organized in a row-and-column format similar to a spreadsheet. Each row represents a record, and each column represents a field in the record.
+### [(Relational) Database concepts: table, column, row, schema, index, keys, constraints, query..]()
 
-<div style="text-align: center;">
-  <img src="pic/component-of-a-database-table.png" alt="Example for database types" style="max-width: 600px; width: 100%; height: auto;">
-</div>
+### [Database management concepts: update, backup, restore]()
 
-**What is index in database?**
+## [**Target and Plan (MySQL)**]()
 
-- An index is a database structure that you can use to improve the performance of database activity. Each index will contain sorted value of indexed column and pointer to its row. (**B-Tree Indexing**)
+### [Install and configure MySQL server]()
 
-<div style="text-align: center;">
-  <img src="pic/index-table.png" alt="Example for database types" style="max-width: 450px; width: 100%; height: auto;">
-</div>
-
-**What is key in database?**
-
-- A key is an attribute or set of attributes that identifies records in a table. 
-
-  - Primary
-  - Foreign
-  - Unique
-
-<div style="text-align: center;">
-  <img src="pic/db-keys.png" alt="Example for database types" style="max-width: 500px; width: 100%; height: auto;">
-</div>
-
-**Constraints**
-
-- SQL constraints are used to specify rules for the data in a table. They are used to limit the type of data that can go into a table. 
-
-- Common constraints:
-
-  - NOT NULL
-  - UNIQUE
-  - PRIMARY KEY (NOT NULL + UNIQUE)
-  - FOREIGN KEY
-
-**What is database schema?**
-
-- A database schema refers to the logical and visual configuration of the entire relational database. 
-
-### Database types
-
-Databases can be classified into two primary types: `Relational` and `NoSQL Databases`.
-
-Relational database: stores information in tables. Example: MySQL, SQL Server, Oracle, PostgreSQL...
-
-NoSQL databases is then further divided into many types:
-
-<div style="text-align: center;">
-  <img src="pic/db-ecosystem.png" alt="Example for database types" style="max-width: 600px; width: 100%; height: auto;">
-</div>
-
-### Database management
-
-## Target and plan
-
-### Install and configure MySQL server
-
-**Task: Install MySQL server: 5.7**
-
-Dowload MySQL Repository
-
-```console
-$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
-$ ls
-mysql-apt-config_0.8.12-1_all.deb
-```
-
-After MySQL package dowloaded success, install it:
-
-```console
-$ sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
-```
-
-Then choose options follow steps `Ubuntu Bionic` - `MySQL Server & Cluster option` - `mysql-5.7` - `OK`.
-
-Update the repository:
-
-```console
-$ sudo apt update
-```
-
-Import key:
-
-```console
-$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys [add_key_here]
-```
-
-Update one more time:
-
-```console
-$ sudo apt update --allow-insecure-repositories
-$ sudo apt update
-```
-
-Check if MySQL 5.7 version repository successfully installed:
-
-```console
-$ sudo apt-cache policy mysql-server
-mysql-server:
-  Installed: (none)
-  Candidate: 8.0.39-0ubuntu0.22.04.1
-  Version table:
-    ...       
-    5.7.42-1ubuntu18.04 500
-      500 http://repo.mysql.com/apt/ubuntu bionic/mysql-5.7 amd64 Packages
-```
-
-Install MySQL 5.7 version:
-
-```console
-$ sudo apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
-```
-
-Check MySQL Server version
-
-```console
-$ mysql --version
-mysql  Ver 14.14 Distrib 5.7.42, for Linux (x86_64) using  EditLine wrapper
-```
-
-**Task: Change configuration option**
-
-Change port MySQL to 9306 and bind-address to private IP: Edit in config file `/etc/mysql/mysql.conf.d/mysqld.cnf`
-
-Stop MySQL:
-
-```console
-$ sudo systemctl stop mysql
-```
-
-Add lines `port = 9306` and `bind-address    = 192.168.56.6 (your private IP address)`
-
-Start MySQL again and check:
-
+`Task`: **Install MySQL server: version 5.7, change configuration option:**
+  - **port 9306**: Add line **port = 9306** to `/etc/mysql/mysql.conf.d/mysqld.cnf` file
 ```sql
-mysql> SHOW GLOBAL VARIABLES LIKE 'PORT';
+mysql> SHOW GLOBAL VARIABLES LIKE 'port';
 +---------------+-------+
 | Variable_name | Value |
 +---------------+-------+
@@ -176,7 +51,9 @@ mysql> SHOW GLOBAL VARIABLES LIKE 'PORT';
 1 row in set (0.00 sec)
 ```
 
-**Change log path to /home/database/mysql/logs**
+
+  - **bind host: private ip address**
+  - **change log path: /home/database/mysql/logs**
 
 Stop MySQL service:
 
@@ -188,7 +65,7 @@ Create a new directory to store log:
 
 ```console
 $ sudo mkdir -p /home/database/mysql/logs
-$ sudo chmod 777 /home/database/mysql
+$ sudo chmod 777 /home/database/mysql/logs
 ```
 
 Copy logs from default location to new location and remove old one:
@@ -221,14 +98,10 @@ $ cat /home/database/mysql/logs/error.log
 
 You can see the content of new log and old log located in new directory successfully!
 
-**max_connections: 100**
-
-Edit in config file `/etc/mysql/mysql.conf.d/mysqld.cnf`:
-
-Stop MySQL, add line `max_connections = 100`, start and check:
+  - **max connections = 100**: Add line **max_connections = 100** to `/etc/mysql/mysql.conf.d/mysqld.cnf` file
 
 ```sql
-mysql> SHOW VARIABLEs LIKE 'max_connections';
+mysql> SHOW GLOBAL VARIABLES LIKE 'max_connections';
 +-----------------+-------+
 | Variable_name   | Value |
 +-----------------+-------+
@@ -237,51 +110,54 @@ mysql> SHOW VARIABLEs LIKE 'max_connections';
 1 row in set (0.00 sec)
 ```
 
-Beside `max_connections`, there are more some parameters MySQL help us to control the number of connections to out database:
+  - **log level (error, warning, info), log type (error, slow), check log (slow, general, error)**
+  - **password policy**
+### [Manage user, permissions]()
+`Task`:
+  - **Create user: admin, client**
 
-  - **max_user_connections**: limit connections per user to prevent a user create too much connections to database.
-
-  - **wait_timeout (non-interactive), interactive timeout**: limit to time a connection doesn't made interact to database before logout. 
-
-  - **max_connect_errors**: Limit of error connect from a host before block it.
-
-  - **back_log**: -1 (autosize) or equal to max_connections.
-
-### Management user, permissions
-
-**Task: Create user admin, client with permissions**
-
-```sql
+  ```sql
 mysql> CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Admin@1';
 mysql> GRANT SELECT, INSERT, DELETE, UPDATE on *.* TO 'admin'@'localhost' WITH GRANT OPTION;
 mysql> CREATE USER 'client'@'localhost' IDENTIFIED BY 'Client@1';
 mysql> GRANT SELECT on *.* TO 'client'@'localhost' WITH GRANT OPTION;
 mysql> FLUSH PRIVILEGES;
 ```
+```
+mysql> SELECT USER, HOST FROM mysql.user;
++------------------+--------------+
+| USER             | HOST         |
++------------------+--------------+
+| admin            | localhost    |
+| client           | localhost    |
+| root             | localhost    |
++------------------+--------------+
+8 rows in set (0.00 sec)
+```
+  - **Access to database via user admin, client**
 
-**Task: Access to database using user client and admin**
+Login to MySQL server:
 
 ```console
 $ mysql -u admin -p
-Enter password: 
+Enter password:
+```
+```
 Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 3
+Your MySQL connection id is 9
+Server version: 8.0.39-0ubuntu0.22.04.1 (Ubuntu)
+...
+mysql>
 ```
 
-### Basic Query
+### [Basic Query]()
 
-**Self practice: create, delete database - create, drop, truncate, alter table**
 
-**Self practice: insert, update, delete records/row**
 
-### Datatype, Variables
+`Task`: **Self-practice query**
 
-### List important parameter
+### [Data type, variable]()
 
-## References
+### [Important Parameters]()
 
-- [devart.com - How to install MySQL in ubuntu](https://www.devart.com/dbforge/mysql/how-to-install-mysql-on-ubuntu/#install-mysql-5-on-ubuntu)
-- [learn.microfost.com - Tables](https://learn.microsoft.com/en-us/sql/relational-databases/tables/tables?view=sql-server-ver16)
-- [progress.com - How to implement and use database indexes](https://www.progress.com/tutorials/odbc/using-indexes)
-- [Oracle.com - What is database](https://www.oracle.com/vn/database/what-is-database/)
-- [w3schools.com - MySQL Constraints](https://www.w3schools.com/mysql/mysql_constraints.asp)
+## [**References**]()
