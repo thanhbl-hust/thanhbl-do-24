@@ -7,7 +7,7 @@ Algorithms:
 - Mustknow
 
   - QuickSort: [Geeks](https://www.geeksforgeeks.org/quick-sort-algorithm/)
-  - Binary Search: [Geeks](https://www.geeksforgeeks.org/binary-search/)
+  - BinarySearch: [Geeks](https://www.geeksforgeeks.org/binary-search/)
 
 - Backtracking (Depth First Search): [Sodoku Solver](https://leetcode.com/problems/sudoku-solver/description/), [N-Queens](https://leetcode.com/problems/n-queens/description/), [Unique Paths III](https://leetcode.com/problems/unique-paths-iii/description/), [Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/description/)
 

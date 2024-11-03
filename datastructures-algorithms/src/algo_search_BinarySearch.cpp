@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int N, arr[10];
+int N, value, arr[10];
 
 int biSearch(int low, int high, int value){
   while(low <= high){
@@ -15,9 +15,8 @@ int biSearch(int low, int high, int value){
 }
 
 int main(){
-  cin >> N; for(int i = 0; i < N; i++) cin >> arr[i];
+  cin >> N >> value; for(int i = 0; i < N; i++) cin >> arr[i];
   sort(arr, arr + N);
-  int value = 3;
   int idx = biSearch(0, N - 1, value);
   cout << idx << endl;
   return 0;
