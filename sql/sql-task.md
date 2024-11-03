@@ -19,7 +19,11 @@
 - [**References**](#references)
 
 ## [**Database Overview**]()
-
+- [History of database](#history-of-databse)
+- [What is database?](#what-is-database)
+- [Database types: Relational and Non-relational database](#database-types-relational-and-non-relational-database)
+- [(Relational) Database concepts: table, column, row, schema, index, keys, constraints, query..](#relational-database-concepts-table-column-row-schema-index-keys-constraints-query)
+- [Database management concepts: update, backup, restore](#database-management-concepts-update-backup-restore)
 ### [History of databse]()
 
 ### [What is database?]()
@@ -31,11 +35,19 @@
 
 ### [Database types: Relational and Non-relational database]()
 
+Database can be classified into 2 primary types: `Relational` and `NoSQL` databases.
+
 ### [(Relational) Database concepts: table, column, row, schema, index, keys, constraints, query..]()
 
 ### [Database management concepts: update, backup, restore]()
 
 ## [**Target and Plan (MySQL)**]()
+
+- [Install and configure MySQL server](#install-and-configure-mysql-server)
+- [Manage user, permissions](#manage-user-permissions)
+- [Basic Query](#basic-query)
+- [Data type, variable](#data-type-variable)
+- [Important Parameters](#important-parameters)
 
 ### [Install and configure MySQL server]()
 
@@ -160,4 +172,20 @@ mysql>
 
 ### [Important Parameters]()
 
+- **max_connections**: 
+
+- **max_user_connections**: 
+
+- **max_connect_errors**:
+
+- **wait_timeout**:
+
+- **interactive_timeout**:
+
 ## [**References**]()
+
+List of references:
+
+  - [Master. Phuong Nguyen Hong]() - Database Course (SOICT - HUST)
+
+  - [dev.mysql.com](https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html) - Server System Variables
