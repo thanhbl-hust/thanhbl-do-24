@@ -26,6 +26,7 @@
 - [Database management concepts: update, backup, restore](#database-management-concepts-update-backup-restore)
 ### [History of databse]()
 
+
 ### [What is database?]()
 
 **So, what is a database?** 
@@ -36,6 +37,10 @@
 ### [Database types: Relational and Non-relational database]()
 
 Database can be classified into 2 primary types: `Relational` and `NoSQL` databases.
+
+<div style="text-align: center;">
+  <img src="pic/compare_databases.png" alt="Description of image" style="max-width: 500px; width: 100%; height: auto;">
+</div>
 
 ### [(Relational) Database concepts: table, column, row, schema, index, keys, constraints, query..]()
 
@@ -243,6 +248,8 @@ mysql>
 
 List of references:
 
-  - [Master. Phuong Nguyen Hong]() - Database Course (SOICT - H)
+  - [Master. Phuong Nguyen Hong]() - Database Course (SOICT - Hanoi University of Science and Technology)
 
   - [dev.mysql.com](https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html) - Server System Variables
+
+  - [mongodb.com](https://www.mongodb.com/resources/compare/relational-vs-non-relational-databases) - Relational vs Non.Relational Databases

@@ -1,6 +1,6 @@
 `thanh.bl Dv0s 2024`
 
-Visit my Linkedin account [Lam Thanh Bui]()
+Visit my account: [Linkedin](https://www.linkedin.com/in/thanh-bl/) - [Codeforces](https://codeforces.com/profile/thanhbl-chler) - [Leetcode](https://leetcode.com/u/cris_deLamThanh/)
 
 **Repository structures:**
 
