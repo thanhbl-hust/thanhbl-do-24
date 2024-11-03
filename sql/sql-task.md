@@ -45,13 +45,76 @@ Database can be classified into 2 primary types: `Relational` and `NoSQL` databa
 
 - [Install and configure MySQL server](#install-and-configure-mysql-server)
 - [Manage user, permissions](#manage-user-permissions)
-- [Basic Query](#basic-query)
 - [Data type, variable](#data-type-variable)
 - [Important Parameters](#important-parameters)
 
 ### [Install and configure MySQL server]()
 
 `Task`: **Install MySQL server: version 5.7, change configuration option:**
+
+  - **Install MySQL Server 5.7**
+
+Dowload MySQL Repository
+ 
+```console
+$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+$ ls
+mysql-apt-config_0.8.12-1_all.deb
+```
+ 
+After MySQL package dowloaded success, install it:
+ 
+```console
+$ sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
+```
+ 
+Then choose options follow steps `Ubuntu Bionic` - `MySQL Server & Cluster option` - `mysql-5.7` - `OK`.
+ 
+Update the repository:
+ 
+```console
+$ sudo apt update
+```
+ 
+Import key:
+ 
+```console
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys [add_key_here]
+```
+ 
+Update one more time:
+ 
+```console
+$ sudo apt update --allow-insecure-repositories
+$ sudo apt update
+```
+ 
+Check if MySQL 5.7 version repository successfully installed:
+ 
+```console
+$ sudo apt-cache policy mysql-server
+mysql-server:
+  Installed: (none)
+  Candidate: 8.0.39-0ubuntu0.22.04.1
+  Version table:
+    ...       
+    5.7.42-1ubuntu18.04 500
+      500 http://repo.mysql.com/apt/ubuntu bionic/mysql-5.7 amd64 Packages
+```
+ 
+Install MySQL 5.7 version:
+ 
+```console
+$ sudo apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
+```
+ 
+Check MySQL Server version
+ 
+```console
+$ mysql --version
+mysql  Ver 14.14 Distrib 5.7.42, for Linux (x86_64) using  EditLine wrapper
+```
+
   - **port 9306**: Add line **port = 9306** to `/etc/mysql/mysql.conf.d/mysqld.cnf` file
 ```sql
 mysql> SHOW GLOBAL VARIABLES LIKE 'port';
@@ -162,12 +225,6 @@ Server version: 8.0.39-0ubuntu0.22.04.1 (Ubuntu)
 mysql>
 ```
 
-### [Basic Query]()
-
-
-
-`Task`: **Self-practice query**
-
 ### [Data type, variable]()
 
 ### [Important Parameters]()
@@ -186,6 +243,6 @@ mysql>
 
 List of references:
 
-  - [Master. Phuong Nguyen Hong]() - Database Course (SOICT - HUST)
+  - [Master. Phuong Nguyen Hong]() - Database Course (SOICT - H)
 
   - [dev.mysql.com](https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html) - Server System Variables
