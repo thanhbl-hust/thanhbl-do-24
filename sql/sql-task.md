@@ -6,8 +6,7 @@
   - [History of database](#history-of-databse)
   - [What is database?](#what-is-database)
   - [Database types: Relational and Non-relational database](#database-types-relational-and-non-relational-database)
-  - [(Relational) Database concepts: table, column, row, schema, index, keys, constraints, query..](#relational-database-concepts-table-column-row-schema-index-keys-constraints-query)
-  - [Database management concepts: update, backup, restore](#database-management-concepts-update-backup-restore)
+  - [(Relational) Database concepts: table, column, row, schema, index, keys, constraints..](#relational-database-concepts-table-column-row-schema-index-keys-constraints-query)
 
 - [**Target and plan (MySQL)**](#target-and-plan)
   - [Install and configure MySQL server](#install-and-configure-mysql-server)
@@ -22,8 +21,8 @@
 - [History of database](#history-of-databse)
 - [What is database?](#what-is-database)
 - [Database types: Relational and Non-relational database](#database-types-relational-and-non-relational-database)
-- [(Relational) Database concepts: table, column, row, schema, index, keys, constraints, query..](#relational-database-concepts-table-column-row-schema-index-keys-constraints-query)
-- [Database management concepts: update, backup, restore](#database-management-concepts-update-backup-restore)
+- [(Relational) Database concepts: table, column, row, schema, index, keys, constraints..](#relational-database-concepts-table-column-row-schema-index-keys-constraints-query)
+
 ### [History of databse]()
 
 
@@ -38,13 +37,45 @@
 
 Database can be classified into 2 primary types: `Relational` and `NoSQL` databases.
 
+NoSQL databases include several different models for accessing and managing data, each suited to specific use cases. 
+
+<div style="text-align: center;">
+  <img src="pic/types-of-nosql.png" alt="Description of image" style="max-width: 500px; width: 100%; height: auto;">
+</div>
+
 <div style="text-align: center;">
   <img src="pic/compare_databases.png" alt="Description of image" style="max-width: 500px; width: 100%; height: auto;">
 </div>
 
-### [(Relational) Database concepts: table, column, row, schema, index, keys, constraints, query..]()
+### [(Relational) Database concepts: table, column, row, schema, index, keys, constraints..]()
 
-### [Database management concepts: update, backup, restore]()
+#### Table - Column - Row
+
+<div style="text-align: center;">
+  <img src="pic/table_structure.png" alt="Description of image" style="max-width: 500px; width: 100%; height: auto;">
+</div>
+
+#### Schema
+
+#### Index
+
+#### Key
+
+#### Constraints
+
+SQL constraints are used to specify rules for the data in a table.
+
+Constraints are used to limit the type of data that can go into a table. This ensures the accuracy and reliability of the data in the table. If there is any violation between the constraint and the data action, the action is aborted.
+
+Common constraints in SQL database:
+
+  - **NOT NULL**: Ensures that a column can't have a NULL value
+
+  - **UNIQUE**: Ensures that all values in a column are different
+
+  - **PRIMARY KEY**: Combination of NOT NULL and UNIQUE, used to identifies each row in a table
+
+  - **DEFAULT**: Provides a default value for a column when no value is specified during an insert operation
 
 ## [**Target and Plan (MySQL)**]()
 
@@ -132,7 +163,7 @@ mysql> SHOW GLOBAL VARIABLES LIKE 'port';
 ```
 
 
-  - **bind host: private ip address**
+  - **bind-address: private ip address**
   - **change log path: /home/database/mysql/logs**
 
 Stop MySQL service:
@@ -253,3 +284,5 @@ List of references:
   - [dev.mysql.com](https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html) - Server System Variables
 
   - [mongodb.com](https://www.mongodb.com/resources/compare/relational-vs-non-relational-databases) - Relational vs Non.Relational Databases
+
+  - [learn.microsoft.com](https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/relational-vs-nosql-data) - SQL vs. NoSQL data
