@@ -61,6 +61,10 @@ A database schema is a logical representation of data that shows how the data in
 
 Most SQL indexes are stored in [B-tree](). 
 
+<div style="text-align: center;">
+  <img src="pic/index.png" alt="Description of image" style="max-width: 550px; width: 100%; height: auto;">
+</div>
+
 **B-tree indexing:**
 
 The **B-tree**, also called balanced-tree, its nodes are sorted in a inorder traversal. A node in a B-tree can have more than 2 children. The height of a b-tree adjusts automatically, b-tree has lowest value on the left and the highest value on the right.
@@ -73,13 +77,19 @@ Different points from b-tree over binary tree:
 
   - A B-tree node can have more than 2 childs (based on B-tree order)
 
-  - A B-tree node can have more than one value (not like in binary tree, has one value only)
+  - A B-tree node can have more than one value (not like in binary tree, has one value only), decrease height of b-tree
+
+  - Binary Tree height can be a big number (not balanced), which can lead to 0(n) time complexity in common actions like insert, delete
 
 
 
 #### Key
 
 In a relational database, a **Key** is defined as a column or a group of columns which are used to uniquely locate records in a table.
+
+<div style="text-align: center;">
+  <img src="pic/keys.png" alt="Description of image" style="max-width: 550px; width: 100%; height: auto;">
+</div>
 
 There are some common keys in MySQL:
 
@@ -92,6 +102,7 @@ There are some common keys in MySQL:
   - **Candicate key**: Keys that can uniquely identify the record so except primary key, remaining key are considered as candicate key.
 
   - **Super key**: A super key is a set of one or more attributes that, taken collectively, can uniquely identify a record in a table.
+
 
 #### Constraints
 
