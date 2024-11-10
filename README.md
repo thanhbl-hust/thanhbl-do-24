@@ -27,6 +27,8 @@ Contents:
 
 ### 1. Networking and OS
 
+- [Networking: Top-down approaching (pdf)]()
+
 ### 2. Linux
 
 - [1. Linux basic task]()
@@ -34,6 +36,8 @@ Contents:
 ### 3. Git
 
 ### 4. MySQL
+
+- [1. MySQL task at SS company]()
 
 ### 5. Docker 
 
@@ -46,6 +50,11 @@ Contents:
 ### 6. Kubernetes
 
 - [1. Container orchestration and Kubernetes Overview]()
+
+- [2. How to setup Kubernetes cluster using minikuber]()
+
+- [3. How to setup Kubernetes cluster using kubeadm (pdf)]()
+
 
 ### 7. Amazon Web Services
 
