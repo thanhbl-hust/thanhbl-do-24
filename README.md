@@ -51,7 +51,7 @@ Contents:
 
 - [1. Container orchestration and Kubernetes Overview]()
 
-- [2. How to setup Kubernetes cluster using minikuber]()
+- [2. How to setup Kubernetes cluster using minikube]()
 
 - [3. How to setup Kubernetes cluster using kubeadm (pdf)]()
 
